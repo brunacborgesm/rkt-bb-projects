@@ -1,0 +1,15 @@
+[submodule "fullstack/stage03/fullstack/stage03/rkt-cat-blog"]
+	path = fullstack/stage03/fullstack/stage03/rkt-cat-blog
+	url = https://github.com/brunacborgesm/rkt-cat-blog.git
+[submodule "rkt-cat-blog"]
+	path = rkt-cat-blog
+	url = https://github.com/brunacborgesm/rkt-cat-blog.git
+[submodule "rkt-photovlog"]
+	path = rkt-photovlog
+	url = https://github.com/brunacborgesm/rkt-photovlog.git
+[submodule "rkt-form"]
+	path = rkt-form
+	url = https://github.com/brunacborgesm/rkt-form.git
+[submodule "rkt-responsive01"]
+	path = rkt-responsive01
+	url = https://github.com/brunacborgesm/rkt-responsive01.git

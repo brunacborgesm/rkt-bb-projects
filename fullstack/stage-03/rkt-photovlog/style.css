@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --color-base-gray: #f5f5f5;
+    --color-base-white: #fff;
+    --color-base-gray-800: #8d8d99;
+    --color-base-gray-900: #202024;
+
+    font-family: 'Mulish';
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--color-base-white);
+}
+
+#app {
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+    height: 100vh;
+}
+
+.container {
+    padding: 1.6rem 3.2rem;
+    width: min(112rem, 100%);
+    margin: 0 auto;
+}
+
+header {
+    --startY: -100%;
+    animation: move .2s;
+}
+
+header,
+nav,
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 7.2rem;
+    font-weight: 700;
+}
+
+.input-wrapper label {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 1.6rem;
+    background-color: var(--color-base-gray);
+    border: none;
+    border-radius: .6rem;
+    font-weight: 600;
+    opacity: 0.56;
+}
+
+.input-wrapper input::placeholder {
+    color: var(--color-base-gray-900);
+    opacity: 0.56;
+    font-family: 'Mulish';
+}
+
+header form {
+    flex: 1;
+}
+
+nav ul {
+    list-style: none;
+    font-size: 1.8rem;
+    color: var(--color-base-gray-800);
+}
+
+nav ul li.active {
+    color: var(--color-base-gray-900);
+}
+
+main {
+    background-color: var(--color-base-gray);
+    overflow-y: scroll;
+}
+
+main h1 {
+    font-size: 2.4rem;
+    padding: 1.6rem;
+    font-weight: 600;
+}
+
+.gallery {
+    display: grid;
+    gap: 1.6rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 3.2rem;
+}
+
+.item {
+    animation: appear .4s var(--delay) backwards;
+}
+
+.item img {
+    border-radius: 1.6rem 1.6rem 0 0;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.item img:hover {
+    filter: saturate(100%) grayscale(1);
+    transition: 0.7s;
+    transform: scale(1.05);
+}
+
+.item .details {
+    border-radius: 0 0 1.6rem 1.6rem;
+    background-color: var(--color-base-white);
+    width: 100%;
+    padding: 2.3rem;
+}
+
+.item .details h2 {
+    font-size: 1.8rem;
+}
+
+.item .tags {
+    background-color: var(--color-base-gray);
+    color: var(--color-base-gray-900);
+    font-size: 1.1rem;
+    width: 3.8rem;
+    padding: .7rem;
+    border-radius: .5rem;
+    margin-top: 1.2rem;
+
+}
+
+.tags span {
+    text-align: center;
+}
+
+footer {
+    --startY: 100%;
+    animation: move .2s;
+}
+
+footer p {
+    text-align: center;
+    padding: 1.6rem;
+}
+
+@keyframes move {
+    from {
+        transform: translateY(var(--startY));
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+}
